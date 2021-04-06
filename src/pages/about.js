@@ -33,9 +33,8 @@ function About({data: {allContentfulRecipe: {nodes: recipes}}}) {
                                      placeholder={"blurred"}
                         />
                     </section>
-
                     <section className={"featured-recipes"}>
-                        <h5>More delicious coming soon </h5>
+                        <h5 style={{marginTop:16, alignSelf:'center'}}>More delicious coming soon </h5>
                         <RecipesList recipes={recipes}/>
                     </section>
                 </main>
@@ -69,13 +68,15 @@ const Wrapper = styled.section`
     text-transform: none;
     font-weight: bold;
   }
-
   .about-page {
     display: grid;
     gap: 2rem 4rem;
     padding-bottom: 3rem;
   }
-
+  .featured-recipes{
+    display: flex;
+    flex-direction: column;
+  }
   .about-img {
     border-radius: var(--borderRadius);
     height: 500px;
